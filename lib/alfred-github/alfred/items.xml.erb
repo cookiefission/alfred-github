@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<items><% repositories.each do |repository| %>
+  <item uid="<%= repository.url %>" arg="<%= repository.url %>" valid="yes">
+    <title><%= repository.name %></title>
+    <subtitle><%= repository.url %></subtitle>
+    <icon>icon.png</icon>
+  </item><% end %>
+</items>

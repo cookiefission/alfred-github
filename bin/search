@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+$: << File.dirname(__FILE__) + '/../lib'
+
+require 'alfred-github/alfred'
+
+puts AlfredGithub::Alfred.search(ARGV[0].to_s)
