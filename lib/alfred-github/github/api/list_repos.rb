@@ -1,5 +1,6 @@
 require 'alfred-github/github/api/get'
 require 'alfred-github/repository'
+require 'alfred-github/error_response'
 
 module AlfredGithub
   class Github
@@ -21,6 +22,9 @@ module AlfredGithub
           request.parsed_response.map do |repo|
             Repository.new(repo)
           end
+
+        rescue ApiError => e
+          [ ErrorResponse.new(e.message) ]
         end
 
         private

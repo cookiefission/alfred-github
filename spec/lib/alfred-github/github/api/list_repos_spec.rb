@@ -28,8 +28,14 @@ module AlfredGithub
           end
 
           context 'when the response is bad' do
-            xit 'returns a error repository' do
+            let(:token) { 'badtoken' }
 
+            it 'returns only the error response' do
+              expect(list.count).to eq(1)
+            end
+
+            it 'returns an error response' do
+              expect(list).to all(be_an_instance_of(ErrorResponse))
             end
           end
         end
