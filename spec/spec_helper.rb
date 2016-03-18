@@ -1,4 +1,5 @@
 ENV['REPOS_FILE'] = File.dirname(__FILE__) + '/support/repositories.json'
+ENV['INSTANCES_FILE'] = File.dirname(__FILE__) + '/support/instances.json'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
