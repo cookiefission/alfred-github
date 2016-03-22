@@ -54,7 +54,7 @@ module AlfredGithub
 
         def query_string
           if params.any?
-            '?' + params.map {|k, v| "#{CGI.escape k}=#{CGI.escape v}"}.join("&")
+            '?' + params.map {|k, v| "#{k}=#{v}"}.join("&")
           else
             ''
           end
