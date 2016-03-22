@@ -10,9 +10,20 @@ module AlfredGithub
       new.find(query)
     end
 
+    def self.write(repositories)
+      new.write(repositories)
+    end
+
     def find(query)
       repositories.select { |repo| repo.name.include?(query) }
     end
+
+    def write(repositories)
+      File.open(repositories_file, 'w') do |file|
+        file.write(repositories.to_json)
+      end
+    end
+
 
     private
 
