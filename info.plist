@@ -8,6 +8,17 @@
 	<string>Internet</string>
 	<key>connections</key>
 	<dict>
+		<key>248C7918-000A-4A00-9D26-E0924056A994</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9A3AFB7D-C426-4A85-A66B-C5388EBDBEC2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>2FEF7453-AC3E-486C-A2E7-0FF3C57978F3</key>
 		<array>
 			<dict>
@@ -132,31 +143,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>output</key>
-				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>Local repository cache has been rebuilt.</string>
-				<key>title</key>
-				<string>Fetch Complete!</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>4AA352CD-4988-46C4-8CBE-1DBA4FCCA92A</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
@@ -194,11 +180,75 @@
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Local repository cache has been rebuilt.</string>
+				<key>title</key>
+				<string>Fetch Complete!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>4AA352CD-4988-46C4-8CBE-1DBA4FCCA92A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gh-auth</string>
+				<key>subtext</key>
+				<string>For github.com and Enterprise installations.</string>
+				<key>text</key>
+				<string>Edit Github authorisations</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>248C7918-000A-4A00-9D26-E0924056A994</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>sourcefile</key>
+				<string>~/Dropbox/Alfred/Alfred.alfredpreferences/workflows/user.workflow.DAAD327E-B4E2-4349-BB4D-697A6A422195/data/instances.json</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>9A3AFB7D-C426-4A85-A66B-C5388EBDBEC2</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>248C7918-000A-4A00-9D26-E0924056A994</key>
+		<dict>
+			<key>ypos</key>
+			<real>340</real>
+		</dict>
 		<key>2FEF7453-AC3E-486C-A2E7-0FF3C57978F3</key>
 		<dict>
 			<key>ypos</key>
@@ -213,6 +263,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>220</real>
+		</dict>
+		<key>9A3AFB7D-C426-4A85-A66B-C5388EBDBEC2</key>
+		<dict>
+			<key>ypos</key>
+			<real>340</real>
 		</dict>
 		<key>E5737DD5-EB36-4CBC-BCCE-692434136CFA</key>
 		<dict>
