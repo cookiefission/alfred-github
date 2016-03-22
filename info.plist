@@ -8,6 +8,28 @@
 	<string>Internet</string>
 	<key>connections</key>
 	<dict>
+		<key>2FEF7453-AC3E-486C-A2E7-0FF3C57978F3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>94C7A3E6-C7C8-4AE7-B7ED-3008F561960E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>94C7A3E6-C7C8-4AE7-B7ED-3008F561960E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4AA352CD-4988-46C4-8CBE-1DBA4FCCA92A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>E5737DD5-EB36-4CBC-BCCE-692434136CFA</key>
 		<array>
 			<dict>
@@ -17,6 +39,14 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E737E3DC-DB10-460B-AB09-3979F671A006</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Copy to Clipboard</string>
 			</dict>
 		</array>
 	</dict>
@@ -30,6 +60,23 @@
 	<string>Github</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>plusspaces</key>
+				<false/>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>E7172EB6-A8F5-4723-A440-032AB40D06C4</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -70,17 +117,80 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
+				<key>autopaste</key>
 				<false/>
-				<key>url</key>
+				<key>clipboardtext</key>
 				<string>{query}</string>
-				<key>utf8</key>
-				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>E7172EB6-A8F5-4723-A440-032AB40D06C4</string>
+			<string>E737E3DC-DB10-460B-AB09-3979F671A006</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Local repository cache has been rebuilt.</string>
+				<key>title</key>
+				<string>Fetch Complete!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>4AA352CD-4988-46C4-8CBE-1DBA4FCCA92A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>gh-update</string>
+				<key>subtext</key>
+				<string>Queries Github instances for up to date repository information.</string>
+				<key>text</key>
+				<string>Rebuild your repositories cache</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2FEF7453-AC3E-486C-A2E7-0FF3C57978F3</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ruby bin/rebuild</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>94C7A3E6-C7C8-4AE7-B7ED-3008F561960E</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -89,15 +199,35 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>2FEF7453-AC3E-486C-A2E7-0FF3C57978F3</key>
+		<dict>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>4AA352CD-4988-46C4-8CBE-1DBA4FCCA92A</key>
+		<dict>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>94C7A3E6-C7C8-4AE7-B7ED-3008F561960E</key>
+		<dict>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
 		<key>E5737DD5-EB36-4CBC-BCCE-692434136CFA</key>
 		<dict>
 			<key>ypos</key>
-			<real>60</real>
+			<real>100</real>
 		</dict>
 		<key>E7172EB6-A8F5-4723-A440-032AB40D06C4</key>
 		<dict>
 			<key>ypos</key>
-			<real>60</real>
+			<real>10</real>
+		</dict>
+		<key>E737E3DC-DB10-460B-AB09-3979F671A006</key>
+		<dict>
+			<key>ypos</key>
+			<real>100</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>

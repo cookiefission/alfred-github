@@ -1,4 +1,5 @@
 ENV['REPOS_FILE'] = File.dirname(__FILE__) + '/support/repositories.json'
+ENV['INSTANCES_FILE'] = File.dirname(__FILE__) + '/support/instances.json'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -20,3 +21,6 @@ RSpec.configure do |config|
   config.order = :random
   Kernel.srand config.seed
 end
+
+require 'support/webmock'
+require 'support/example_data'
