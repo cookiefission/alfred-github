@@ -7,9 +7,15 @@ module AlfredGithub
       {
         'full_name' => 'foo/bar',
         'html_url' => 'https://github.com/foo/bar',
+        'private' => private?,
+        'fork' => fork?,
+        'mirror_url' => mirror_url,
         'some_key' => 'does not matter',
       }
     }
+    let(:private?) { false }
+    let(:fork?) { false }
+    let(:mirror_url) { nil }
 
     describe '#name' do
       it 'returns the full_name of the response' do
@@ -23,11 +29,38 @@ module AlfredGithub
       end
     end
 
+    describe '#type' do
+      subject(:type) { repo.type }
+
+        it { is_expected.to eq('repo') }
+
+      context 'when it is private' do
+        let(:private?) { true }
+
+        it { is_expected.to eq('private') }
+      end
+
+      context 'when it is a fork' do
+        let(:fork?) { true }
+
+        it { is_expected.to eq('fork') }
+      end
+
+      context 'when it is a mirror' do
+        let(:mirror_url) { 'example.com' }
+
+        it { is_expected.to eq('mirror') }
+      end
+    end
+
     describe '#to_hash' do
       let(:expected_hash) {
         {
           'full_name' => 'foo/bar',
           'html_url' => 'https://github.com/foo/bar',
+          'private' => false,
+          'fork' => false,
+          'mirror_url' => nil,
         }
       }
 
