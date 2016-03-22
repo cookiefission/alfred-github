@@ -1,4 +1,5 @@
 require 'net/https'
+require 'alfred-github/github/api/headers/link'
 
 module AlfredGithub
   class Github
@@ -18,7 +19,15 @@ module AlfredGithub
         def parsed_response
           fail(ApiError, error_message) unless success?
 
-          JSON.parse(response.body)
+          responses = Array(JSON.parse(response.body))
+          next_page = Headers::Link.next_page(response['Link'])
+
+          if next_page
+            @uri = URI(next_page)
+            responses.concat(parsed_response)
+          end
+
+          responses
         end
 
         def success?

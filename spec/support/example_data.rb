@@ -5,7 +5,8 @@ module Spec
     extend self
 
     def user_repos
-      parsed_fixture('user-repos.json')
+      parsed_fixture('user-repos.json').
+        concat(parsed_fixture('user-repos-page-2.json'))
     end
 
     def parsed_fixture(file)

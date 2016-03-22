@@ -22,7 +22,7 @@ module AlfredGithub
           private
 
           def raw_links
-            header.split(',').map do |raw_link|
+            header.to_s.split(',').map do |raw_link|
               _, link, rel = /<(.+)>;\s*rel="(.+)"/.match(raw_link.strip).to_a
               [rel, link]
             end

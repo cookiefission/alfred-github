@@ -26,6 +26,10 @@ module AlfredGithub
           {
             'full_name' => 'cookiefission/alfred-github',
             'html_url' => 'https://github.com/cookiefission/alfred-github'
+          },
+          {
+            'full_name' => 'cookiefission/dotfiles',
+            'html_url' => 'https://github.com/cookiefission/dotfiles'
           }
         ]
       }

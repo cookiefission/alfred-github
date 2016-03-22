@@ -19,7 +19,7 @@ module AlfredGithub
 
           context 'when the response is good' do
             it 'returns all the repositories' do
-              expect(list.count).to eq(1)
+              expect(list.count).to eq(2)
             end
 
             it 'wraps the returned repositories in Repository' do
