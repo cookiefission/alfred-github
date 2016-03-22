@@ -25,11 +25,17 @@ module AlfredGithub
         [
           {
             'full_name' => 'cookiefission/alfred-github',
-            'html_url' => 'https://github.com/cookiefission/alfred-github'
+            'html_url' => 'https://github.com/cookiefission/alfred-github',
+            'private' => false,
+            'fork' => false,
+            'mirror_url' => nil,
           },
           {
             'full_name' => 'cookiefission/dotfiles',
-            'html_url' => 'https://github.com/cookiefission/dotfiles'
+            'html_url' => 'https://github.com/cookiefission/dotfiles',
+            'private' => false,
+            'fork' => false,
+            'mirror_url' => nil,
           }
         ]
       }

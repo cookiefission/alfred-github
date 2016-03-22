@@ -26,6 +26,9 @@ module AlfredGithub
       [
         'full_name',
         'html_url',
+        'private',
+        'fork',
+        'mirror_url',
       ]
     end
 
