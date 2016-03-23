@@ -15,7 +15,8 @@ module AlfredGithub
           double(
             'Repository',
             name: 'foo/bar',
-            url: url
+            url: url,
+            type: 'icon'
           )
         }
         let(:url) { 'https://github.com/foo/bar' }
