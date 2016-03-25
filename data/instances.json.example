@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://api.github.com",
+    "token": "<your token here>"
+  },
+  {
+    "url": "https://github.example.com/api/v3",
+    "token": "<your enterprise token here>"
+  }
+]
