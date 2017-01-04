@@ -2,11 +2,11 @@ require 'json'
 
 module Spec
   module ExampleData
-    extend self
+    module_function
 
     def user_repos
-      parsed_fixture('user-repos.json').
-        concat(parsed_fixture('user-repos-page-2.json'))
+      parsed_fixture('user-repos.json')
+        .concat(parsed_fixture('user-repos-page-2.json'))
     end
 
     def parsed_fixture(file)

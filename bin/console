@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-$: << File.dirname(__FILE__) + '/../lib'
+$LOAD_PATH << File.dirname(__FILE__) + '/../lib'
 
-require 'alfred-github'
+require 'alfred_github'
 require 'irb'
 
 IRB.start
